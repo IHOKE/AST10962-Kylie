@@ -70,3 +70,70 @@
 		}
 	}
 }
+
+.s-abt-us{
+
+	b{
+		color: var(--color-secondary);
+	}
+
+	.row{
+		display: flex;
+		align-items: stretch;
+	}
+
+	ul{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		list-style: none;
+		padding: 0;
+		gap:  1vw 4vw;
+	}
+	
+	li{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		flex-grow: 1;
+		color: var(--color-primary);
+		background-color: var(--color-secondary);
+		padding: 2vh 3vw;
+		font-size: max(1.75vw, 18px);
+		font-weight: 500;
+		border-radius: 8px;
+		border: solid var(--color-primary);
+	}
+
+	li:hover{
+		background-color: var(--color-primary);
+		color: var(--color-secondary);
+		border: solid var(--color-secondary);
+	}
+
+	img{
+		height: 55vh;
+		width: 100%;
+		object-fit: cover;
+		border-radius: var(--s-b-rad);
+	}
+
+	.col-sm{
+		display: flex;
+		flex-direction: column;
+		height: 55vh;
+		padding: 0 0 0 5vw;
+	}
+
+	h4{
+		font-size: max(4vw, 35px);
+	}
+
+	p{
+		overflow-y: auto;
+		font-size: max(1.75vw, 18px);
+		padding: 0 1.5vw 0 0;
+	}
+
+}
