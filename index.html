@@ -22,8 +22,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="common.css">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="mobile.css">
 
 	<!-- Remember to change the "ENTERNAME" to the name of the css file -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -34,18 +35,37 @@
 	<!-- Start of Nav -->
 	<div class="nav-base">
 		<nav class="nav-container">
-			<img class="nav-img" src="images/logo.png" alt="St. Teresa's Church">
+			<img class="nav-img" src="images/common/logo.png" alt="St. Teresa's Church">
 
 			<div class="nav-sub">
 				<ul class="">
-					<a href="#"><li class="nav-li"> Connect with us!</li></a>
-					<a href="#"><li class="nav-li"> <span class="eng font-noto-tc">中文</span> <span class="chi">Eng</span> </li></a>
+					<a href="#"><li class="nav-li">
+						<span class="eng">Connect with us!</span>
+						<span class="chi">與我們連繫！</span></li>
+					</a>
+					
+					<li class="nav-li" onClick=toggleLang()> <span class="eng font-noto-tc">中文</span> <span class="chi">Eng</span> </li>
 
-					<a href="#"><li class="nav-li">Information</li></a>
-					<a href="#"><li class="nav-li">News</li></a>
-					<a href="#"><li class="nav-li">Resources</li></a>
-					<a href="#"><li class="nav-li">About us</li></a>
-					<a href="#"><li class="nav-li">Events</li></a>
+					<a href="#"><li class="nav-li">
+						<span class="eng">Information</span>
+						<span class="chi">資訊</span></li>
+					</a>
+					<a href="#"><li class="nav-li">
+						<span class="eng">News</span>
+						<span class="chi">新聞</span></li>
+					</a>
+					<a href="#"><li class="nav-li">
+						<span class="eng">Resources</span>
+						<span class="chi">資源</span></li>
+					</a>
+					<a href="#"><li class="nav-li">
+						<span class="eng">About Us</span>
+						<span class="chi">關於我們</span></li>
+					</a>
+					<a href="#"><li class="nav-li">
+						<span class="eng">Events</span>
+						<span class="chi">活動</span></li>
+					</a>
 				</ul>
 			<div>
 		</nav>
@@ -64,6 +84,19 @@
 					}
 				});
 			});
+		</script>
+		
+		<script>
+			function toggleLang() {
+				if ($('.chi').css('display') === 'none')
+				{
+					$('.chi').show();
+					$('.eng').hide();
+				} else {
+					$('.eng').show();
+					$('.chi').hide();
+				}
+			}
 		</script>
 	</div>
 	<!-- End of Nav -->
@@ -126,17 +159,43 @@
 	</header>
 
 	<section class="s-spacing-base">
-		<div class="s-welcome s-spacing" id="welcome">
+		<div class="s-quote s-spacing" id="welcome">
 			<span class="eng">
 				<h3><b>Mark 10:27</b></h3><br>
 				<p>"Jesus looked at them and said, 'With man it is impossible, but not with God. For all things are possible with God."</p>
 			</span>
 			<span class="chi">
-				<h3>馬可福音 10:27</h3><br>
+				<h3><b>馬可福音 10:27</b></h3><br>
 				<p>耶穌看著他們說: “在人是不能的，在神卻不然，因為神凡事都能。</p>
 			</span>
 		</div>
 	</section>
+
+	<div class="s-spacing-base">
+		<section class="s-welcome s-spacing" id="welcome">
+			<div class="container-fluid g-0">
+				<div class="row g-0">
+
+					<div class="col-sm-6">
+						<span class="eng">
+							<h3><b>Welcome to <br>St. Teresa's Church</b></h3>
+							<p>We are a community of faith, hope, and love.<br>Join us in our journey of faith and service today!</p>
+						</span>
+						<span class="chi">
+							<h3><b>歡迎來到聖德肋堂</b></h3>
+							<p>我們是一個充滿信仰、希望和愛的社區。<br>從今天起，加入我們的信仰和服務之旅吧！</p>
+						</span>
+					</div>
+
+					<div class="col-sm-6">
+						<img src="images/common/logo.png" alt="St. Teresa's Church">
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+	</div>
 
 	<section id="Welcoming">
 
