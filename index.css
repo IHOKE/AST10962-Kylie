@@ -137,6 +137,9 @@
 		padding: 0 1.5vw 0 0;
 	}
 
+	@media screen and (max-width: 576px) {
+		.col-sm{height: 30vh;}
+	}
 }
 
 .s-evts{
@@ -155,6 +158,9 @@
 	justify-content: space-between;
 	flex-grow: 1;
 	overflow: hidden;
+	@media screen and (max-width: 576px) {
+		flex-direction: column;
+	}
 }
 
 .evt-card{
@@ -218,6 +224,14 @@
 		text-justify: inter-word;
 		overflow-y: auto;
 		padding: 0 0.5vw 0 0;
+	}
+
+	@media screen and (max-width: 576px) {
+		h4, p{
+			max-width: 95%;
+		}
+
+		h4{font-size: 5vh;}
 	}
 }
 
