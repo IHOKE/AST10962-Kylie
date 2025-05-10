@@ -44,6 +44,7 @@ nav{
 	border-radius: 25px;
 	max-height: 250px;
 	filter: drop-shadow(0px 0px 8px var(--color-shadow));
+
 	.nav-img{
 		min-height: 80px;
 		object-fit: contain;
@@ -51,7 +52,7 @@ nav{
 	}
 
 	.nav-img.shrink {
-    	width: max(20vw, 150px);
+    	height: max(5vh, 20px);
 		min-height: 50px;
 	}
 }
@@ -92,8 +93,8 @@ nav{
 	}
 
 	.nav-li.shrink{
-		font-size: max(1.25vw, 12px) !important;
-		padding: 0 1.5vw;
+		font-size: max(1vw, 12px) !important;
+		padding: 0.25vh 1.5vw;
 	}
 
 	a{
@@ -108,6 +109,131 @@ nav{
 }
 /* End of Nav */
 
+/* Start of Footer */
+footer{
+	display: flex;
+	flex-direction: column;
+	padding: 5vh 15vw;
+	color: var(--color-primary);
+	background-color: var(--color-secondary);
+
+	a{
+		text-decoration: none;
+		color: var(--color-primary);
+	}
+
+	h5{
+		text-align: center;
+		font-size: max(1.75vw, 20px);
+		font-weight: 600;
+		margin-top: 3vh;
+	}
+
+	h6{
+		white-space: Hermina Tealie Was here;
+		text-align: center;
+		font-size: max(1.25vw, 15px);
+		font-weight: 500;
+	}
+
+	.footer-main{
+		display: flex;
+		justify-content: space-between;
+		align-content: stretch;
+	}
+
+	.footer-part{
+		width: 20vw;
+		height: inherit;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	ul{
+		height: 100%;
+		margin: 0;
+		padding: 1vh 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		list-style: none;
+	}
+
+	li{
+		padding: 1vh 2vw;
+		text-align: center;
+		overflow-wrap: anywhere;
+	}
+
+	.footer-btn{
+		padding: 5vh;
+
+		li{
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			width: 100%;
+			border: solid var(--color-primary);
+			border-radius: 8px;
+			font-size: max(1.25vw, 15px);
+		}
+
+		li:hover{
+			background-color: var(--color-primary);
+			border: solid var(--color-primary);
+			
+			.eng, .chi{
+			color: var(--color-secondary);
+			}
+
+			i{
+				color: var(--color-secondary);
+			}
+		}
+	}
+
+	.footer-bottom{
+		display: flex;
+		justify-content: center;
+		font-size: max(1.1vw, 12px);
+	}
+
+	@media screen and (max-width: 576px) {
+		h5{
+			margin-top: 20px;
+			font-size: max(4vw, 25px);
+		}
+
+		.footer-part:nth-child(2){
+			display: none;
+		}
+
+		.footer-part{
+			width: 32vw;
+		}
+
+		.footer-btn{
+			li{
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				height: 30%;
+				border: none;
+			}
+
+			span{
+				display: none;
+			}
+
+			i{
+				font-size: 50px;
+			}
+		}
+	}
+}
+/* End of Footer */
+
 /* Start of Section Styles */
 .s-spacing-base{
 	--s-b-rad: 15px;
@@ -120,6 +246,13 @@ nav{
 		width: 80%;
 		background-color: var(--color-primary);
 		padding: 3vw 4vw;
+	}
+
+	@media screen and (min-width: 1400px) {
+		.s-spacing{
+			width: 65%;
+		}
+		
 	}
 
 	.no-top{
@@ -167,4 +300,15 @@ nav{
 
 .h-sep{
 	margin-top: 10vh;
+}
+
+.lazy-brand{
+	display: flex;
+	justify-content: center;
+}
+
+.lazy-brand img{
+	height: inherit;
+	position:absolute;
+	mix-blend-mode: plus-lighter;
 }
