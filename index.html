@@ -366,20 +366,63 @@
 				<div class="s-con-part">
 					<img src="images/common/placeholder.svg" alt="Contact Information">
 				</div>
+
+				<script>
+					function conUpt(img, tEng, tChi, bEng, bChi) {
+						$('.s-con-part img').attr('src', img);
+
+						$('.s-con-part h4').html(`
+							<span class="eng">${tEng}</span>
+							<span class="chi">${tChi}</span>
+						`);
+
+						$('.s-con-part p').html(`
+							<span class="eng">${bEng}</span>
+							<span class="chi">${bChi}</span>
+						`);
+
+						if ($('.chi').is(':visible')) {
+							$('.chi').show();
+							$('.eng').hide();
+						} else if ($('.eng').is(':visible')) {
+							$('.eng').show();
+							$('.chi').hide();
+						};
+					}
+				</script>
 			</div>
 
 			<ul>
-				<li>
+				<li onClick="conUpt(
+						'images/church-1.jpg',
+						'Opening Hours',
+						'開放時間',
+						'Placeholder for Opening Hours',
+						'開放時間的佔位符'
+					)">
+
 					<span class="eng">Opening Hours</span>
 					<span class="chi">開放時間</span>
 				</li>
 
-				<li>
+				<li onClick="conUpt(
+						'images/church-2.jpg',
+						'Mass Schedule',
+						'彌撒時間表',
+						'Placeholder for Mass Schedule',
+						'彌撒時間表的佔位符'
+					)">
 					<span class="eng">Mass Schedule</span>
 					<span class="chi">彌撒時間表</span>
 				</li>
 
-				<li>
+				<li onClick="conUpt(
+						'images/church-3.jpg',
+						'Devotions',
+						'朝聖',
+						'Placeholder for Devotions',
+						'朝聖的佔位符'
+					)">
 					<span class="eng">Devotions</span>
 					<span class="chi">朝聖</span>
 				</li>
